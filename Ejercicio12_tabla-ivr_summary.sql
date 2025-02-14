@@ -1,0 +1,23 @@
+CREATE OR REPLACE TABLE practicaKC.ivr_summary AS
+SELECT 
+  calls_ivr_id as ivr_id,
+  customer_phone as phone_number,
+  step_result as ivr_result,
+  vdn_aggregation as vdn_aggregation,
+  calls_start_date as start_date,
+  calls_end_date as end_date,
+  calls_total_duration as total_duration,
+  calls_customer_segment as customer_segment,
+  calls_ivr_language as ivr_language,
+  calls_steps_module as steps_module,
+  calls_module_aggregation as module_aggregation,
+  document_type as document_type,
+  document_identification as document_identification,
+  customer_phone as customer_phone,
+  billing_account_id as billing_account_id,
+  masiva_lg as masiva_lg,
+  info_by_phone_lg as info_by_phone_lg,
+  info_by_dni_lg as info_by_dni_lg,
+  has_call_before_24h as repeated_phone_24H,
+  has_call_after_24h as cause_recall_phone_24H,
+FROM `practicaKC.ivr_detail`
